@@ -991,3 +991,45 @@ button {
   opacity: 1;
   visibility: visible;
 }
+/* --- Desktop Settings --- */
+@media (min-width: 769px) {
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 50px;
+        align-items: center;
+    }
+}
+
+/* --- Mobile Phone Settings --- */
+@media (max-width: 768px) {
+    /* Make your top hero avatar scale smoothly on small screens */
+    .hero-avatar {
+        width: 100% !important;
+        max-width: 180px !important;
+        height: auto !important;
+        margin: 0 auto 15px auto !important;
+        display: block;
+    }
+
+    /* Force the about grid elements to stack vertically on phones */
+    .about-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 25px !important;
+    }
+
+    /* Keep your big city photo perfectly proportioned on phones */
+    .about-image {
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
+    }
+
+    .about-image img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 12px;
+    }
+}

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const articleEl = document.getElementById('typewriterArticle');
   const roles = [
     { text: 'Agricultural Engineer', article: 'an' },
-    { text: 'Future Data Analyst', article: 'a' },
+    { text: 'Data Analyst', article: 'a' },
     { text: 'GIS Specialist', article: 'a' },
   ];
   let roleIndex = 0;
