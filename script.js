@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const roles = [
     { text: 'Agricultural Engineer', article: 'an' },
     { text: 'Data Analyst', article: 'a' },
-    { text: 'GIS Enthusiast', article: 'a' },
+    { text: 'GIS Enthusiaster', article: 'a' },
   ];
   let roleIndex = 0;
   let charIndex = 0;
