@@ -991,36 +991,64 @@ button {
   opacity: 1;
   visibility: visible;
 }
-/* --- Desktop Settings --- */
+/* ==========================================================================
+   COMPLETE ABOUT ME SECTION RESCUE CODE (Desktop + Mobile)
+   ========================================================================== */
+
+/* --- Clean, Proportional Layout for Laptops/Desktops --- */
 @media (min-width: 769px) {
     .about-grid {
-        display: grid;
-        grid-template-columns: 1fr 1.2fr;
-        gap: 50px;
-        align-items: center;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        max-width: 1100px !important;
+        margin: 0 auto !important;
+        padding: 40px 20px !important;
+        gap: 60px !important; /* Perfect visual gap between picture and bio */
+    }
+
+    .about-image {
+        flex: 1 !important;
+        max-width: 400px !important; /* Keeps your city image crisp and well-sized */
+        width: 100% !important;
+    }
+
+    .about-image img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 12px !important;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    .about-text {
+        flex: 1.3 !important;
+        max-width: 600px !important;
+        text-align: left !important;
     }
 }
 
-/* --- Mobile Phone Settings --- */
+/* --- Clean, Balanced Layout for Mobile Phones --- */
 @media (max-width: 768px) {
-    /* Make your top hero avatar scale smoothly on small screens */
+    /* Rescale hero profile pic smoothly */
     .hero-avatar {
         width: 100% !important;
-        max-width: 180px !important;
+        max-width: 160px !important;
         height: auto !important;
         margin: 0 auto 15px auto !important;
-        display: block;
+        display: block !important;
     }
 
-    /* Force the about grid elements to stack vertically on phones */
+    /* Stack items perfectly on phone viewports */
     .about-grid {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
-        gap: 25px !important;
+        gap: 30px !important;
+        padding: 20px !important;
+        width: 100% !important;
     }
 
-    /* Keep your big city photo perfectly proportioned on phones */
     .about-image {
         width: 100% !important;
         max-width: 320px !important;
@@ -1030,6 +1058,12 @@ button {
     .about-image img {
         width: 100% !important;
         height: auto !important;
-        border-radius: 12px;
+        border-radius: 12px !important;
+    }
+
+    .about-text {
+        width: 100% !important;
+        padding: 0 10px !important;
+        text-align: left !important;
     }
 }
